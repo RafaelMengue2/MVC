@@ -4,5 +4,11 @@ class Tarefa {
     this.title = title;
     this.description = description;  
     }
+
+    listarTarefas(){
+        const Database = require ('Database');
+        let tarefas = Database.query("SELECT * FROM tarefas");
+        return tarefas;
+    }
 }
 module.exports = Tarefa;
