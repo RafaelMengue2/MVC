@@ -10,7 +10,7 @@ class Tarefa {
         return await Database.query("SELECT = FROM Tarefa");
     }
 
-    static async salvar (){
+    async salvar (){
         const Database = require ('./Database');
         let resp = await Database.query(`INSERT INTO (title, description) VALUES ('${this.title}','${this.description}')`);
     }
